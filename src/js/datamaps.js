@@ -1156,8 +1156,8 @@
 
   Datamap.prototype.addPlugin = function( name, pluginFn ) {
     var self = this;
-    if ( typeof Datamap.prototype[name] === "undefined" ) {
-      Datamap.prototype[name] = function(data, options, callback, createNewLayer) {
+    if ( typeof this[name] === "undefined" ) {
+        this[name] = function(data, options, callback, createNewLayer) {
         var layer;
         if ( typeof createNewLayer === "undefined" ) {
           createNewLayer = false;
